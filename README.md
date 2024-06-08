@@ -32,7 +32,8 @@
 2. estimated wait time
 3. Button to reserve a spot (please get to the clinic in 1 hour)
 
-### `clinic/[id]/checkin/` (WEBSITE)
+### `clinic/[id]/checkin/` (WEBSITE) 
+- SOMEWHAT DONE
 
 #### `clinic/id/checkin?atClinic=True` (QR CODE)
 
