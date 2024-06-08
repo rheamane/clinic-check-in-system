@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Patients
 
-## Getting Started
+1. See estimated wait time/# of people in line (before they sign up or at home)
+2. Enter name and phone number to join the queue
+3. See YOUR estimated wait time/# of people in line before you (after they sign up)
+4. Be able to cancel their appointment / remove them from the queue
+5. Get notification when theyre next in line / it is their turn (twilio integration or in-app notification)
+6. Feedback on the process
 
-First, run the development server:
+### Doctors/Admins
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Open/Close queue
+   1. its like opening and closing the clinic - This way nobody can sign up off-hours - also save money on websockets
+2. Can rearrange patients
+3. decide whos next
+4. Add/delete patients
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### TV
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Shows the queue with initials of the patients (privacy)
+2. Displays the estimated wait time for people who haven't signed up yet
+3.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### `/clinic`
 
-## Learn More
+1. shows cards for the two clinics
+2. address, phone number, speciality
 
-To learn more about Next.js, take a look at the following resources:
+### `/clinic/[id]/`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Basic info and current opening status
+2. estimated wait time
+3. Button to reserve a spot (please get to the clinic in 1 hour)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### `clinic/[id]/checkin/` (WEBSITE)
 
-## Deploy on Vercel
+#### `clinic/id/checkin?atClinic=True` (QR CODE)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Form to enter Name and Phone Number
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### `clinic/[id]/patient/[UUID]/`
+
+1. Keep track of your ETA
+2. Button "I am here" and it will solidify your place in the line
+3. Cancel my appointment
+4. Button that opens the address in google maps
+5. A little timer to warn them to check in
+
+### `clinic/[id]/queue`
+
+1. Shows queue (ex. Ninad K.)
+2. Notifies next person when thier turn comes up
+3. ETA for walk-ins
+4. Check in reminder
+
+### `doctor/[id]/queue`
+
+1. Open/Close queue
+2. You can see the list of patients waiting (checked in)
+3. Can manipulate the order of the patients / add-subtract
