@@ -28,9 +28,11 @@
 
 ### `/clinic/[id]/`
 
-1. Basic info and current opening status
-2. estimated wait time
-3. Button to reserve a spot (please get to the clinic in 1 hour)
+1. Doctor's Name and Picture and Qualifications
+2. Address / Map and Phone Number
+3. Full week hours - Todays hours and week hours
+4. Specialities / Services (Functional and Non-Functional)
+5. Join the waitlist button
 
 ### `clinic/[id]/checkin/` (WEBSITE) 
 - SOMEWHAT DONE

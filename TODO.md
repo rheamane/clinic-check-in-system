@@ -1,5 +1,6 @@
 ### Overall
 - [ ] Add color scheme
+- [ ] Responsive
   
 ### `clinic/[id]/checkin`
 - [ ] Form Validation Styling
@@ -7,5 +8,5 @@
 - [ ] Cancel button routing to `/clinic/[id]`
 
 ### `clinic/`
-- [ ] Icons for directions and phone
+- [x] Icons for directions and phone
   
