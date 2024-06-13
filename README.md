@@ -28,11 +28,13 @@
 
 ### `/clinic/[id]/`
 
-1. Doctor's Name and Picture and Qualifications
-2. Address / Map and Phone Number
-3. Full week hours - Todays hours and week hours
-4. Specialities / Services (Functional and Non-Functional)
-5. Join the waitlist button
+- [x] Doctor's Name and Picture 
+- [x] Qualifications
+- [ ] Address / Map 
+- [x] Phone Number
+- [ ] Full week hours - Todays hours and week hours
+- [x] Specialities / Services (Functional and Non-Functional)
+- [x] Join the waitlist button
 
 ### `clinic/[id]/checkin/` (WEBSITE) 
 - SOMEWHAT DONE

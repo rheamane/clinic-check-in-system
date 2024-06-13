@@ -9,4 +9,8 @@
 
 ### `clinic/`
 - [x] Icons for directions and phone
-  
+
+### `clinic/[id]`
+- [ ] Address Google map
+- [ ] Fix sticky element color scheme
+- [ ] 
