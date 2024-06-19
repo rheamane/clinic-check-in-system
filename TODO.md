@@ -13,4 +13,4 @@
 ### `clinic/[id]`
 - [ ] Address Google map
 - [ ] Fix sticky element color scheme
-- [ ] 
+- [ ] to ask: add a link in the address line

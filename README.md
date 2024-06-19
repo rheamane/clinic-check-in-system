@@ -28,15 +28,16 @@
 
 ### `/clinic/[id]/`
 
-- [x] Doctor's Name and Picture 
+- [x] Doctor's Name and Picture
 - [x] Qualifications
-- [ ] Address / Map 
+- [ ] Address / Map
 - [x] Phone Number
-- [ ] Full week hours - Todays hours and week hours
+- [x] Full week hours - Todays hours and week hours
 - [x] Specialities / Services (Functional and Non-Functional)
 - [x] Join the waitlist button
 
-### `clinic/[id]/checkin/` (WEBSITE) 
+### `clinic/[id]/checkin/` (WEBSITE)
+
 - SOMEWHAT DONE
 
 #### `clinic/id/checkin?atClinic=True` (QR CODE)
@@ -45,7 +46,7 @@
 
 ### `clinic/[id]/patient/[UUID]/`
 
-1. Keep track of your ETA
+1. Keep track of your ETA // this is the time you are next in line???
 2. Button "I am here" and it will solidify your place in the line
 3. Cancel my appointment
 4. Button that opens the address in google maps
@@ -63,3 +64,12 @@
 1. Open/Close queue
 2. You can see the list of patients waiting (checked in)
 3. Can manipulate the order of the patients / add-subtract
+
+## QUEUE LOGIC
+
+1. Add people to the back of the queue
+2. Each person has a check in boolean
+3. When doc queries nextPatient() => first person with a true check in (pop)
+
+Join waitlist = join queue at home
+Check in = confirmation of being at the clinic

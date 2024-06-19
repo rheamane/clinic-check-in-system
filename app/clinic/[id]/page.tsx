@@ -2,13 +2,6 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import shwetaImage from "@/public/s.jpg";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
   Navigation,
   Phone,
   ListPlus,
@@ -76,6 +69,22 @@ const clinicID = () => {
             {service}
           </Badge>
         ))}
+      </div>
+
+      {/* LOCATION */}
+      <div>
+        <h2 className="text-md font-semibold">Location</h2>
+        <p className="text-xs text-muted-foreground">
+          117 Marathon Max, Goregaon-Mulund Link Road, Mulund(West), Mumbai,
+          Maharashtra 400080
+        </p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15074.849988825428!2d72.9381592!3d19.1640582!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9556839b6cd%3A0x1c26dca29af64afa!2sDr%20Shweta%20Mane!5e0!3m2!1sen!2sus!4v1718310183214!5m2!1sen!2sus"
+          className="h-full w-full"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       {/* CLINIC HOURS */}
