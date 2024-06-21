@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge";
 
 const clinicID = () => {
   return (
-    <div className="m-1 flex flex-col gap-2 rounded-lg bg-white p-5 text-primary">
+    <div className="m-1 flex flex-col gap-2 rounded-lg bg-white p-5">
       {/* HEADER */}
       <div className="flex flex-row gap-2">
         <Image

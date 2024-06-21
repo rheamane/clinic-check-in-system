@@ -32,7 +32,7 @@ const CheckIn = () => {
   const errorStyle = "ring-2 ring-red-500 ring-offset-2 ring-offset-background";
 
   return (
-    <div className="flex h-screen items-center justify-center bg-sky-900">
+    <div className="flex h-screen items-center justify-center">
       <Card>
         <CardHeader>
           <CardTitle>Check In</CardTitle>
@@ -86,7 +86,7 @@ const CheckIn = () => {
                 </SelectGroup>
               </SelectContent>
             </Select>
-            <CardFooter className="mt-2 flex flex-col gap-2 p-0">
+            <CardFooter className="flex flex-col gap-2 p-0">
               <Button className="w-full bg-sky-700">Check In</Button>
               <Button variant="ghost">Cancel</Button>
             </CardFooter>
