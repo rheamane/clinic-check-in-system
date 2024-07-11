@@ -27,3 +27,8 @@
 ### `clinic/[id]/patient`
 - [ ] Handle 404
 
+### `doctor/dashboard`
+- [x] Queue element
+- [ ] Onclicks for buttons
+  
+

@@ -41,15 +41,24 @@
 1. Sign up or log in
 2. Set localStorage with supabase auth
 
-### `/doctor/[id]/dashboard`
+### `/doctor/dashboard`
 
 (check supabase auth session, else go back to /doctor)
 
 1. Open/Close queue
-2. You can see the list of patients waiting (checked in)
-3. Can manipulate the order of the patients / add-subtract
+2. Set Password of the day / Auto generate
+3. You can see the list of patients in waiting list / checked in
+4. Add/Move order of patients in queue
+5. Change time for patients 
+6. Current patient
+7. Can cancel appointments if they are checked in
+   
+   Cards:
+   1. Number of patients in waitlist
+   2. Total new patients
+   3. Password of the day
 
-### `/doctor/[id]/settings`
+### `/doctor/settings`
 1. Set info
    1. profile picture
    2. email
@@ -64,7 +73,7 @@
    11. hours
    12. carousel photos
 
-### `/doctor/[id]/analytics`
+### `/doctor/analytics`
 
 
 ## QUEUE LOGIC
