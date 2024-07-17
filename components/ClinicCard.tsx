@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
 
 import { Phone, Navigation, ListPlus } from "lucide-react";
 import {
@@ -10,16 +11,27 @@ import {
   CardDescription,
   CardContent,
 } from "./ui/card";
+import Link from "next/link";
 
 interface cardProps {
+  id: string;
   name: string;
   address: string;
   openNow: boolean;
   waitTime: number;
   phoneNumber: string;
+  locationUrl: string;
 }
 
-const ClinicCard = ({ name, address, openNow, waitTime }: cardProps) => {
+const ClinicCard = ({
+  id,
+  name,
+  address,
+  openNow,
+  waitTime,
+  locationUrl,
+  phoneNumber,
+}: cardProps) => {
   return (
     <Card>
       <CardHeader>
@@ -39,17 +51,23 @@ const ClinicCard = ({ name, address, openNow, waitTime }: cardProps) => {
           </div>
         )}
         <div className="flex flex-col gap-2">
-          <Button variant="default" disabled={!openNow}>
-            <ListPlus className="mr-2 h-4 w-4" /> Join Waitlist
+          <Button variant="default" disabled={!openNow} asChild>
+            <Link href={`/clinic/${id}/checkin`} className="flex items-center">
+              <ListPlus className="mr-2 h-4 w-4" /> Join Waitlist
+            </Link>
           </Button>
           <div className="flex flex-row gap-2">
-            <Button className="flex-1" variant="outline">
-              <Navigation className="mr-2 h-4 w-4" />
-              Get Directions
+            <Button className="flex-1" variant="outline" asChild>
+              <Link href={locationUrl} target="_blank">
+                <Navigation className="mr-2 h-4 w-4" />
+                Get Directions
+              </Link>
             </Button>
-            <Button className="flex-1" variant="outline">
-              <Phone className="mr-2 h-4 w-4" />
-              Phone
+            <Button className="flex-1" variant="outline" asChild>
+              <Link href={`tel:${phoneNumber}`} target="_blank">
+                <Phone className="mr-2 h-4 w-4" />
+                Phone
+              </Link>
             </Button>
           </div>
         </div>

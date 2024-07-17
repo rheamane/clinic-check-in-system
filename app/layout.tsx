@@ -20,11 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen bg-sky-700 font-sans antialiased",
-          fontSans.variable,
-        )}>
+      <body className={cn("font-sans antialiased", fontSans.variable)}>
         {children}
       </body>
     </html>

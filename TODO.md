@@ -10,15 +10,18 @@
 
 ### `clinic/`
 - [x] Icons for directions and phone
-- [ ] Put onclick on the cards to goto /clinic/[id]
-- [ ] Put onclick for join waitlist to go to /clinic/[id]/checkin
-- [ ] onclick on getDirections and getPhone
+- [x] Put onclick on the cards to goto /clinic/[id]
+- [x] Put onclick for join waitlist to go to /clinic/[id]/checkin
+- [x] onclick on getDirections and getPhone
 
 ### `clinic/[id]`
 - [x] Address Google map
 - [ ] Fix sticky element color scheme
-- [ ] to ask: add a link in the address line
-- [ ] Route buttons
+- [x] to ask: add a link in the address line
+- [x] Route buttons
+
+### `clinic/[id]/checkin`
+- [ ] Implement dynamic select - reason for appointment
 
 ### `clinic/[id]/patient/[UUID]`
 - [ ] What does the stepper do

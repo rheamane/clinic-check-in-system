@@ -1,5 +1,13 @@
+import PasswordDashCard from "@/components/PasswordDashCard";
 import QueueElement from "@/components/QueueElement";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import UserDashCard from "@/components/UserDashCard";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   Table,
   TableBody,
@@ -23,8 +31,20 @@ const Dashboard = () => {
       {/* RIGHT SIDE */}
       <div className="flex flex-1 flex-col">
         {/* TOP RIGHT */}
-        <div className="flex h-1/2 flex-none flex-row">
-          <h1 className="ml-2 text-xl font-bold text-slate-900">Cards</h1>
+        <div className="flex flex-none flex-col gap-2 p-5">
+          <div id="card-container" className="flex flex-row gap-4">
+            <UserDashCard
+              title="TOTAL PATIENTS IN WAITLIST"
+              value={12}
+              change={2.34}
+            />
+            <UserDashCard
+              title="NEW PATIENTS IN WAITLIST"
+              value={2}
+              change={-3.45}
+            />
+            <PasswordDashCard title="PASSWORD OF THE DAY" value={"abc123"} />
+          </div>
         </div>
         {/* BOTTOM RIGHT */}
         <div className="flex flex-1 flex-col overflow-y-auto bg-slate-400 p-2">
@@ -50,15 +70,6 @@ const Dashboard = () => {
               </TableRow>
             </TableHeader>
             <TableBody>
-              <QueueElement />
-              <QueueElement />
-              <QueueElement />
-              <QueueElement />
-              <QueueElement />
-              <QueueElement />
-              <QueueElement />
-              <QueueElement />
-              <QueueElement />
               <QueueElement />
               <QueueElement />
               <QueueElement />

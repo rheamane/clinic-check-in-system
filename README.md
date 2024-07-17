@@ -1,3 +1,36 @@
+### DATABASE MODEL 
+
+Table 1: Doctor:
+   - doctor_id : UUID,
+   - name : text NOT NULL,
+   - clinic_address : text NOT NULL,
+   - phone_number: text
+   - services : text (to include comma separated values for easy traversal),  
+   - qualifications : text,
+   - specialty : text,
+   - about : text,
+   - location_url : text (google maps url), 
+   - hours text,  -- Example format: "M:0900-1400,1800-2100;T:0900-1400,1800-2100;etc"
+   - picture : text, -- URL to the picture // link to supabase storage
+   - total_wait_time: numeric (in sec) edge function
+   - open: boolean (false-closed, true-open)
+
+Table 2: Queue
+   // make a composite key with doctor_id and user_id
+   - doctor_id : INT NOT NULL (FOREIGN KEY)
+   - user_id : INT NOT NULL (FOREIGN KEY)
+   - waitlist_join_time : TIMESTAMP DEFAULT CURRENT_TIMESTAMP (FROM USER)
+   - checked_in: boolean (false-not checked in, true-checked in) 
+
+Table 3: User
+   - user_id : INT PRIMARY KEY AUTO_INCREMENT,
+   - name : text NOT NULL,
+   - phone_number : text
+   - reason_for_appointment: string // input from select
+   - new_patient : BOOLEAN (true - New patient, false - Returning patient) 
+   - waitlist_join_time : TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+
 ### `/clinic`
 
 1. shows cards for the two clinics
@@ -55,8 +88,8 @@
    
    Cards:
    1. Number of patients in waitlist
-   2. Total new patients
-   3. Password of the day
+   2. New patients in waitlist
+   3. Password of the day (editable)
 
 ### `/doctor/settings`
 1. Set info
