@@ -30,6 +30,9 @@
 ### `clinic/[id]/patient`
 - [ ] Handle 404
 
+### `doctor/`
+- [ ] Link forgot password (make a new page)
+
 ### `doctor/dashboard`
 - [x] Queue element
 - [ ] Onclicks for buttons

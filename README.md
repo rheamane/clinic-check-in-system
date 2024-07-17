@@ -71,6 +71,18 @@ Table 3: User
 
 ### `/doctor`
 
+layout.tsx
+- navigation to /doctor/signup /doctor/onboard /doctor/dashboard
+
+/doctor/signup
+- signup form
+
+/doctor/onboard
+- onboarding form
+
+/doctor/dashboard 
+- dashboard
+ 
 1. Sign up or log in
 2. Set localStorage with supabase auth
 
