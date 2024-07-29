@@ -3,10 +3,12 @@
 - [ ] Responsive
   
 ### `clinic/[id]/checkin`
-- [ ] Form Validation Styling
-- [ ] "Select" Item Styling and Validation
-- [ ] Route buttons
-- [ ] Cancel button routing to `/clinic/[id]`
+- [x] Form Validation Styling
+- [x] "Select" Item Styling and Validation
+- [ ] Get doctor's services for select
+- [x] Route buttons
+- [x] Cancel button routing 
+- [ ] Handle form submit
 
 ### `clinic/`
 - [x] Icons for directions and phone
@@ -20,12 +22,12 @@
 - [x] to ask: add a link in the address line
 - [x] Route buttons
 
-### `clinic/[id]/checkin`
-- [ ] Implement dynamic select - reason for appointment
-
 ### `clinic/[id]/patient/[UUID]`
 - [ ] What does the stepper do
 - [ ] Route buttons (directions/phone)
+
+### `clinic/[id]/queue`
+- [ ] 
 
 ### `clinic/[id]/patient`
 - [ ] Handle 404

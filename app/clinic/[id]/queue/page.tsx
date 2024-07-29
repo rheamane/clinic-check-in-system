@@ -1,7 +1,7 @@
 import React from "react";
 import { CircleCheck, Clock } from "lucide-react";
 
-const cQueue = () => {
+const Queue = () => {
   let patientArr = [
     { name: "John Doe", checkIn: true },
     { name: "Jane Doe", checkIn: false },
@@ -17,27 +17,29 @@ const cQueue = () => {
   return (
     <div className="h-screen p-4">
       <div className="flex h-full flex-row gap-3 text-black">
-        <div id="leftSide" className="flex w-1/3 flex-none flex-col gap-3">
-          <div className="flex h-1/4 flex-none flex-col rounded-lg bg-blue-50 p-4">
-            <p className="text-xl font-bold">Next Patient</p>
-            <div className="flex flex-1 items-center justify-center">
-              <h1 className="text-3xl font-bold">Rhea M.</h1>
-            </div>
+        <div id="leftSide" className="flex w-1/4 flex-none flex-col gap-3">
+          <div className="flex flex-none flex-col gap-3 rounded-lg bg-blue-500 p-6">
+            <p className="text-center text-3xl font-bold text-slate-50">
+              Next Patient
+            </p>
+            <h1 className="text-center text-5xl font-bold text-slate-50">
+              Rhea M.
+            </h1>
           </div>
-          <div className="flex-1 justify-center rounded-lg bg-blue-50 p-4">
-            <p className="text-xl font-bold">Waitlist</p>
-            <ol>
+          <div className="flex flex-1 flex-col gap-3 rounded-lg bg-blue-50 p-6">
+            <p className="text-center text-3xl font-bold">Waitlist</p>
+            <div>
               {patientArr.map(({ name, checkIn }, index) => (
-                <li key={index} className="flex flex-row items-center text-xl">
+                <p key={index} className="flex flex-row items-center text-3xl">
                   {checkIn ? (
-                    <CircleCheck className="mr-2 h-4 w-4 text-green-500" />
+                    <CircleCheck className="mr-2 h-6 w-6 text-green-500" />
                   ) : (
-                    <Clock className="mr-2 h-4 w-4 text-red-500" />
+                    <Clock className="mr-2 h-6 w-6 text-red-500" />
                   )}
                   {name}
-                </li>
+                </p>
               ))}
-            </ol>
+            </div>
           </div>
         </div>
         <div id="rightSide" className="flex flex-1 flex-col gap-3">
@@ -73,4 +75,4 @@ const cQueue = () => {
   );
 };
 
-export default cQueue;
+export default Queue;

@@ -60,7 +60,7 @@ const ClinicCard = ({
             <Button className="flex-1" variant="outline" asChild>
               <Link href={locationUrl} target="_blank">
                 <Navigation className="mr-2 h-4 w-4" />
-                Get Directions
+                Directions
               </Link>
             </Button>
             <Button className="flex-1" variant="outline" asChild>
