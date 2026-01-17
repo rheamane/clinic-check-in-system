@@ -15,45 +15,51 @@ import Link from "next/link";
 
 interface cardProps {
   id: string;
-  name: string;
+  locationName: string;
+  primaryDoctorName?: string;
   address: string;
   openNow: boolean;
-  waitTime: number;
   phoneNumber: string;
   locationUrl: string;
 }
 
 const ClinicCard = ({
   id,
-  name,
+  locationName,
+  primaryDoctorName,
   address,
   openNow,
-  waitTime,
   locationUrl,
   phoneNumber,
 }: cardProps) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{name}</CardTitle>
+        <CardTitle>
+          <div className="flex flex-col gap-1">
+            <span className="text-xl font-semibold text-slate-900">
+              {locationName}
+            </span>
+
+            <span
+              className={`text-sm font-medium ${
+                primaryDoctorName ? "text-blue-700" : "invisible text-blue-700"
+              }`}>
+              {primaryDoctorName ? `${primaryDoctorName}` : "primary doctor"}
+            </span>
+          </div>
+        </CardTitle>
+
         <CardDescription>{address}</CardDescription>
         <Badge className="w-fit" variant={openNow ? "open" : "closed"}>
           {openNow ? "Open" : "Closed"}
         </Badge>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        {openNow && (
-          <div>
-            <p className="text-xs font-semibold text-muted-foreground">
-              ESTIMATED WAIT
-            </p>
-            <p className="text-4xl font-bold">{waitTime} min</p>
-          </div>
-        )}
         <div className="flex flex-col gap-2">
-          <Button variant="default" disabled={!openNow} asChild>
+          <Button variant="default" asChild>
             <Link href={`/clinic/${id}/checkin`} className="flex items-center">
-              <ListPlus className="mr-2 h-4 w-4" /> Join Waitlist
+              <ListPlus className="mr-2 h-4 w-4" /> Schedule Appointment
             </Link>
           </Button>
           <div className="flex flex-row gap-2">

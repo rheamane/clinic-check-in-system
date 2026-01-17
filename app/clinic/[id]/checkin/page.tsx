@@ -21,6 +21,12 @@ import {
 } from "@/components/ui/select";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+  "https://jtaspvphyvqjjvyqkeqi.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp0YXNwdnBoeXZxamp2eXFrZXFpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjExNTAwMTQsImV4cCI6MjAzNjcyNjAxNH0.N3IiYkWBxK68GA14-28Rz7i7xHn3t7YMqzKbWyVTClI",
+);
 
 const CheckIn = () => {
   const router = useRouter();
